@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NetBy</title>
+    <title>My Modern Website</title>
     <style>
       body {
         margin: 0;
@@ -17,7 +17,6 @@
         position: fixed;
         width: 100%;
         top: 0;
-        z-index: 1000;
       }
       nav ul {
         list-style: none;
@@ -40,7 +39,7 @@
         align-items: center;
         width: 80%;
         max-width: 1200px;
-        margin: 150px auto 50px;
+        margin: 100px auto;
       }
       .text-section {
         max-width: 50%;
@@ -126,30 +125,31 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <section id="home" class="container">
       <div class="text-section">
-        <h1>Welcome to NetBy</h1>
+        <h1>Welcome to My Website</h1>
         <p><strong>Real-Time Networking for Professionals</strong></p>
         <p>🔹 Find opportunities. Connect instantly. Build your career.</p>
         <p>
           Whether you're job-seeking, hiring, or growing your professional
-          network, this platform helps you make meaningful connections in real
-          time.
+          network, this platform helps you make meaningful connections in real time.
         </p>
         <p><strong>🚀 Stop searching. Start connecting.</strong></p>
         <button class="cta-button">Join Now</button>
       </div>
       <div class="logo-section">
-        <img src="netby.png" alt="Website Logo" />
+        <img src="your-logo.png" alt="Website Logo" />
       </div>
     </section>
     
     <section class="image-gallery">
       <div class="image-row">
-        <img src="net1.png" alt="Networking event" onclick="openModal(this)" />
-        <img src="net2.png" alt="Collaboration session" onclick="openModal(this)" />
+        <img src="net1.png" alt="Networking event" onclick="openModal(this)">
+        <img src="net2.png" alt="Collaboration session" onclick="openModal(this)">
+        <img src="net3.png" alt="Success stories" onclick="openModal(this)">
       </div>
     </section>
     
@@ -159,23 +159,35 @@
     
     <section class="image-gallery">
       <div class="image-row">
-        <img src="net3.png" alt="Success stories" onclick="openModal(this)" />
-        <img src="net4.png" alt="New Networking Event" onclick="openModal(this)" />
-        <img src="net5.png" alt="Industry Meetup" onclick="openModal(this)" />
+        <img src="net4.png" alt="New Networking Event" onclick="openModal(this)">
+        <img src="net5.png" alt="Industry Meetup" onclick="openModal(this)">
+        <img src="net6.png" alt="Business Collaboration" onclick="openModal(this)">
       </div>
     </section>
     
     <div id="modal" class="modal" onclick="closeModal()">
-      <img id="modalImage" />
+      <img id="modalImage">
     </div>
     
+    <section id="about" class="content-section">
+      <h2>About Us</h2>
+      <p>Learn more about our mission and how we connect professionals.</p>
+    </section>
+    <section id="services" class="content-section">
+      <h2>Our Services</h2>
+      <p>Discover what we offer to help you succeed in networking.</p>
+    </section>
+    <section id="contact" class="content-section">
+      <h2>Contact Us</h2>
+      <p>Get in touch to learn more or collaborate with us.</p>
+    </section>
     <script>
       function openModal(img) {
-        document.getElementById("modalImage").src = img.src;
-        document.getElementById("modal").style.display = "flex";
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('modal').style.display = 'flex';
       }
       function closeModal() {
-        document.getElementById("modal").style.display = "none";
+        document.getElementById('modal').style.display = 'none';
       }
     </script>
   </body>
