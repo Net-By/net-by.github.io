@@ -12,7 +12,6 @@
       }
 
 
-
       nav {
         background: rgba(0, 0, 0, 0.8);
         padding: 15px;
@@ -120,6 +119,58 @@
         max-width: 90%;
         max-height: 90%;
       }
+      
+      .cta-section {
+        text-align: center;
+        padding: 50px;
+        background: #f9c5d1; /* Soft pink background */
+          }
+
+      .cta-button {
+        background: #ff4081; /* Bright pink button */
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 20px;
+        display: inline-block;
+        border-radius: 8px; /* Rounded corners */
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .cta-button:hover {
+        background: #e6006e; /* Darker pink on hover */
+        transform: scale(1.05); /* Slight zoom effect */
+      }
+
+      .cta-button:active {
+        background: #c5005c; /* Even darker pink when clicked */
+        transform: scale(0.98); /* Slight shrink effect */
+      }
+
+
+      .email-form {
+        margin-top: 20px;
+      }
+
+      .email-input {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        width: 250px;
+      }
+
+      .submit-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        background: #ff4081;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -143,11 +194,13 @@
           time.
         </p>
         <p><strong>Stop searching. Start connecting.</strong></p>
+        <a href="#waitlist" class="cta-button">Join the Waitlist</a>
       </div>
       <div class="logo-section">
         <img src="netby.png" alt="Website Logo" />
       </div>
     </section>
+
 
     <section class="how-it-works">
       <h2>How does it work?</h2>
@@ -189,6 +242,22 @@
       </div>
     </section>
 
+
+    <section class="cta-section" id="waitlist">
+      <h2>Be the First to Try NetBy!</h2>
+      <p>Sign up for early access and get exclusive updates on our launch.</p>
+      <form class="email-form">
+        <input
+          type="email"
+          class="email-input"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" class="submit-button">Join Waitlist</button>
+      </form>
+    </section>
+
+    
     <div id="modal" class="modal" onclick="closeModal()">
       <img id="modalImage" />
     </div>
@@ -246,7 +315,7 @@
     <section id="contact" class="content-section">
       <h2>Contact Us</h2>
       <p>Got questions? Interested in partnerships? We’d love to hear from you!</p>
-      <p>Email: <a href="mailto:netbypro@gmail.com">netbypro@gmail.com</a></p>
+      <p>Email: <a href="mailto:paparoidamiv@gmail.com">paparoidamiv@gmail.com</a></p>
     </section>
     
 
