@@ -246,16 +246,23 @@
     <section class="cta-section" id="waitlist">
       <h2>Be the First to Try NetBy!</h2>
       <p>Sign up for early access and get exclusive updates on our launch.</p>
-      <form class="email-form">
+      
+      <form class="email-form" id="joinNowForm">
         <input
           type="email"
           class="email-input"
+          id="email"
           placeholder="Enter your email"
           required
         />
-        <button type="submit" class="submit-button">Join Waitlist</button>
+        <button type="submit" class="submit-button">Join Now</button>
       </form>
+      
+      <p id="confirmationMessage" style="display: none; color: green; font-weight: bold;">
+        Thank you for joining! We'll be in touch soon.
+      </p>
     </section>
+    
 
     
     <div id="modal" class="modal" onclick="closeModal()">
@@ -327,6 +334,25 @@
       function closeModal() {
         document.getElementById("modal").style.display = "none";
       }
+    </script>
+
+    <script>
+      document.getElementById("joinNowForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+        
+        let email = document.getElementById("email").value;
+
+        if (email.trim() !== "") {
+          // Simulate storing the email (replace with backend logic if needed)
+          console.log("User joined:", email);
+          
+          // Show confirmation message
+          document.getElementById("confirmationMessage").style.display = "block";
+          
+          // Clear input field
+          document.getElementById("email").value = "";
+        }
+      });
     </script>
   </body>
 </html>
