@@ -370,8 +370,14 @@
           let email = document.getElementById("email").value;
 
           if (email.trim() !== "") {
-            // Simulate storing the email (replace with backend logic if needed)
-            console.log("User joined:", email);
+            // Store user's email in database
+            await fetch(
+              `https://btxic4mdrqmt2ktnehh4kruxae0kbzys.lambda-url.us-east-1.on.aws/?email=${email}`,
+              {
+                method: "GET",
+                headers: { "Content-Type": "application/json" },
+              }
+            );
 
             // Show confirmation message
             document.getElementById("confirmationMessage").style.display =
