@@ -11,7 +11,6 @@
         background: linear-gradient(to right, #fff2cc, #f9c5d1);
       }
 
-
       nav {
         background: rgba(0, 0, 0, 0.8);
         padding: 15px;
@@ -119,12 +118,12 @@
         max-width: 90%;
         max-height: 90%;
       }
-      
+
       .cta-section {
         text-align: center;
         padding: 50px;
         background: #f9c5d1; /* Soft pink background */
-          }
+      }
 
       .cta-button {
         background: #ff4081; /* Bright pink button */
@@ -150,7 +149,6 @@
         background: #c5005c; /* Even darker pink when clicked */
         transform: scale(0.98); /* Slight shrink effect */
       }
-
 
       .email-form {
         margin-top: 20px;
@@ -201,7 +199,6 @@
       </div>
     </section>
 
-
     <section class="how-it-works">
       <h2>How does it work?</h2>
     </section>
@@ -233,20 +230,18 @@
         />
       </div>
     </section>
-    
+
     <section class="image-gallery">
       <div class="image-row">
         <img src="net7.png" alt="Industry Meetup" onclick="openModal(this)" />
         <img src="net8.png" alt="Industry Meetup" onclick="openModal(this)" />
-
       </div>
     </section>
-
 
     <section class="cta-section" id="waitlist">
       <h2>Be the First to Try NetBy!</h2>
       <p>Sign up for early access and get exclusive updates on our launch.</p>
-      
+
       <form class="email-form" id="joinNowForm">
         <input
           type="email"
@@ -257,19 +252,20 @@
         />
         <button type="submit" class="submit-button">Join Now</button>
       </form>
-      
-      <p id="confirmationMessage" style="display: none; color: green; font-weight: bold;">
+
+      <p
+        id="confirmationMessage"
+        style="display: none; color: green; font-weight: bold"
+      >
         Thank you for joining! We'll be in touch soon.
       </p>
     </section>
-    
 
-    
     <div id="modal" class="modal" onclick="closeModal()">
       <img id="modalImage" />
     </div>
 
-    <section
+    <!-- <section
       id="about"
       class="content-section"
       style="
@@ -278,7 +274,8 @@
         margin: 0 auto;
         line-height: 1.7;
       "
-    >
+    > -->
+
     <section id="about" class="content-section">
       <h2>About Us</h2>
       <p>
@@ -298,33 +295,61 @@
         connections happen in person.
       </p>
     </section>
-    
+
     <section id="services" class="content-section">
       <h2>Our Services</h2>
       <div>
-        <p style="text-align: center; margin-bottom: 0px;"><strong>Real-Time Professional Discovery:</strong></p>
-        <p style="margin-top: 0;">See professionals around you instantly. No searching, no waiting—just real opportunities NearBy.</p>
-    
-        <p style="text-align: center; margin-bottom: 0px;"><strong>Instant Networking Requests:</strong></p>
-        <p style="margin-top: 0;">Send a “Meet Now” request and connect in real life within minutes—no long introductions needed.</p>
-    
-        <p style="text-align: center; margin-bottom: 0px;"><strong>Seamless LinkedIn Integration:</strong></p>
-        <p style="margin-top: 0;">Sign up in seconds and import your professional details effortlessly.</p>
-    
-        <p style="text-align: center; margin-bottom: 0px;"><strong>Smart Location-Based Matching:</strong></p>
-        <p style="margin-top: 0;">Find relevant professionals nearby based on your industry, skills, and networking goals.</p>
-    
-        <p style="text-align: center; margin-bottom: 0px;"><strong>Premium Networking Features:</strong></p>
-        <p style="margin-top: 0;">Boost your visibility, access exclusive events, and unlock advanced filters to refine your connections.</p>
+        <p style="text-align: center; margin-bottom: 0px">
+          <strong>Real-Time Professional Discovery:</strong>
+        </p>
+        <p style="margin-top: 0">
+          See professionals around you instantly. No searching, no waiting—just
+          real opportunities NearBy.
+        </p>
+
+        <p style="text-align: center; margin-bottom: 0px">
+          <strong>Instant Networking Requests:</strong>
+        </p>
+        <p style="margin-top: 0">
+          Send a “Meet Now” request and connect in real life within minutes—no
+          long introductions needed.
+        </p>
+
+        <p style="text-align: center; margin-bottom: 0px">
+          <strong>Seamless LinkedIn Integration:</strong>
+        </p>
+        <p style="margin-top: 0">
+          Sign up in seconds and import your professional details effortlessly.
+        </p>
+
+        <p style="text-align: center; margin-bottom: 0px">
+          <strong>Smart Location-Based Matching:</strong>
+        </p>
+        <p style="margin-top: 0">
+          Find relevant professionals nearby based on your industry, skills, and
+          networking goals.
+        </p>
+
+        <p style="text-align: center; margin-bottom: 0px">
+          <strong>Premium Networking Features:</strong>
+        </p>
+        <p style="margin-top: 0">
+          Boost your visibility, access exclusive events, and unlock advanced
+          filters to refine your connections.
+        </p>
       </div>
     </section>
-    
+
     <section id="contact" class="content-section">
       <h2>Contact Us</h2>
-      <p>Got questions? Interested in partnerships? We’d love to hear from you!</p>
-      <p>Email: <a href="mailto:paparoidamiv@gmail.com">paparoidamiv@gmail.com</a></p>
+      <p>
+        Got questions? Interested in partnerships? We’d love to hear from you!
+      </p>
+      <p>
+        Email:
+        <a href="mailto:paparoidamiv@gmail.com">paparoidamiv@gmail.com</a>
+      </p>
     </section>
-    
 
     <script>
       function openModal(img) {
@@ -337,22 +362,25 @@
     </script>
 
     <script>
-      document.getElementById("joinNowForm").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent page reload
-        
-        let email = document.getElementById("email").value;
+      document
+        .getElementById("joinNowForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent page reload
 
-        if (email.trim() !== "") {
-          // Simulate storing the email (replace with backend logic if needed)
-          console.log("User joined:", email);
-          
-          // Show confirmation message
-          document.getElementById("confirmationMessage").style.display = "block";
-          
-          // Clear input field
-          document.getElementById("email").value = "";
-        }
-      });
+          let email = document.getElementById("email").value;
+
+          if (email.trim() !== "") {
+            // Simulate storing the email (replace with backend logic if needed)
+            console.log("User joined:", email);
+
+            // Show confirmation message
+            document.getElementById("confirmationMessage").style.display =
+              "block";
+
+            // Clear input field
+            document.getElementById("email").value = "";
+          }
+        });
     </script>
   </body>
 </html>
